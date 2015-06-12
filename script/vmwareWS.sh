@@ -10,12 +10,12 @@ rm ./VMware-Workstation.bundle
 
 
 # copy and install vmware-workstation licensefile
-#wget --no-verbose http://roecloudsrv001.sealsystems.local/vmware/workstation11/vmware-license.zip
-#unzip vmware-license.zip    
-#license=`cat vmware-license.txt`
-#/usr/lib/vmware/bin/vmware-vmx --new-sn $license
-#rm -f vmware-license.zip
-#rm -f license.lic
+wget --no-verbose http://roecloudsrv001.sealsystems.local/vmware/workstation11/vmware-license.zip
+unzip vmware-license.zip    
+license=$(cat vmware-license.txt)
+/usr/lib/vmware/bin/vmware-vmx --new-sn $license
+rm -f vmware-license.zip
+rm -f license.lic
 
 #sudo vmware-networks --stop
 #sudo sed -i "s/172.16./192.168./g" /etc/vmware/networking
